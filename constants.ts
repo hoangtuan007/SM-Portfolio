@@ -2,7 +2,7 @@ import { ResumeData } from './types';
 
 export const RESUME_DATA: ResumeData = {
   name: "Tuan Dang",
-  title: "Scrum Master at Aperia Solutions, Inc.",
+  title: "Scrum Master",
   summary: "I’m a technical-minded Scrum Master with strong experience guiding development teams through complex product delivery and scaled Agile environments. I combine calm leadership with data-driven decision-making, using flow metrics, Power BI dashboards, and automation to improve transparency, predictability, and team performance. I supported Aperia’s Merchant initiative from its greenfield stage, scaling it to six Scrum teams within a SAFe environment.",
   contact: {
     phone: "0932700399",
