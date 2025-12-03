@@ -7,6 +7,8 @@
   <title>Tuan Dang - Technical Scrum Master</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html-docx-js@0.3.1/dist/html-docx.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&family=JetBrains+Mono:wght@400;700&display=swap"
     rel="stylesheet">
@@ -23,8 +25,13 @@
       }
     }
 
-    body.pdf-export {
-      zoom: 0.75;
+    html.pdf-export {
+      font-size: 75%;
+    }
+
+    .break-inside-avoid {
+      break-inside: avoid;
+      page-break-inside: avoid;
     }
   </style>
   <script>

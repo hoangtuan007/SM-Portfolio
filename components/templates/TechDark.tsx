@@ -7,9 +7,9 @@ const TechDark: React.FC<{ data: ResumeData }> = ({ data }) => {
     <div className="min-h-screen bg-[#0d1117] text-gray-300 font-mono selection:bg-green-900 selection:text-green-100 pb-24">
       {/* Top Bar */}
       <div className="w-full h-2 bg-gradient-to-r from-green-500 to-emerald-700"></div>
-      
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        
+
         {/* Header */}
         <header className="flex flex-col md:flex-row justify-between items-start md:items-end border-b border-gray-800 pb-8 mb-12">
           <div>
@@ -24,7 +24,7 @@ const TechDark: React.FC<{ data: ResumeData }> = ({ data }) => {
               <span className="text-green-500">&gt;</span> {data.title}
             </p>
           </div>
-          
+
           <div className="mt-6 md:mt-0 text-right space-y-1 text-sm text-gray-500">
             <p>{data.contact.email}</p>
             <p>{data.contact.linkedin}</p>
@@ -33,10 +33,10 @@ const TechDark: React.FC<{ data: ResumeData }> = ({ data }) => {
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          
+
           {/* Main Column */}
           <div className="lg:col-span-2 space-y-16">
-            
+
             <section>
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
                 <Hash className="text-green-500" /> README.md
@@ -52,14 +52,14 @@ const TechDark: React.FC<{ data: ResumeData }> = ({ data }) => {
               </h2>
               <div className="space-y-8">
                 {data.experience.map((job, idx) => (
-                  <div key={idx} className="group">
+                  <div key={idx} className="group break-inside-avoid">
                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                       <h3 className="text-xl font-bold text-green-400 group-hover:text-green-300 transition-colors">
-                         {job.role} <span className="text-gray-500">@</span> {job.company}
-                       </h3>
-                       <span className="text-xs px-2 py-1 bg-gray-800 rounded text-gray-400 border border-gray-700 font-mono mt-1 md:mt-0 w-fit">
-                         {job.duration}
-                       </span>
+                      <h3 className="text-xl font-bold text-green-400 group-hover:text-green-300 transition-colors">
+                        {job.role} <span className="text-gray-500">@</span> {job.company}
+                      </h3>
+                      <span className="text-xs px-2 py-1 bg-gray-800 rounded text-gray-400 border border-gray-700 font-mono mt-1 md:mt-0 w-fit">
+                        {job.duration}
+                      </span>
                     </div>
                     <ul className="space-y-2 mt-4 pl-4 border-l border-gray-800">
                       {job.achievements.map((ach, i) => (
@@ -77,7 +77,7 @@ const TechDark: React.FC<{ data: ResumeData }> = ({ data }) => {
 
           {/* Sidebar Column */}
           <div className="space-y-12">
-            
+
             <section>
               <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
                 <Cpu className="text-green-500" /> Tech Stack
@@ -96,18 +96,18 @@ const TechDark: React.FC<{ data: ResumeData }> = ({ data }) => {
                 <Database className="text-green-500" /> Certifications
               </h2>
               <div className="space-y-3">
-                 {data.certifications.map((cert, i) => (
-                   <div key={i} className="p-3 bg-[#161b22] rounded border border-gray-800 text-sm hover:border-gray-700 transition-colors">
-                     {cert}
-                   </div>
-                 ))}
+                {data.certifications.map((cert, i) => (
+                  <div key={i} className="p-3 bg-[#161b22] rounded border border-gray-800 text-sm hover:border-gray-700 transition-colors">
+                    {cert}
+                  </div>
+                ))}
               </div>
             </section>
 
-             <section>
+            <section>
               <h2 className="text-xl font-bold text-white mb-6">Education</h2>
               {data.education.map((edu, i) => (
-                <div key={i} className="text-sm">
+                <div key={i} className="text-sm break-inside-avoid">
                   <div className="font-bold text-white">{edu.institution}</div>
                   <div className="text-gray-500">{edu.period}</div>
                 </div>

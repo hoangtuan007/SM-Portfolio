@@ -84,7 +84,7 @@ const ExecutiveSidebar: React.FC<{ data: ResumeData }> = ({ data }) => {
           <h3 className="text-2xl font-bold text-[#2C3E50] uppercase mb-8 border-b-2 border-[#2C3E50] pb-2 inline-block">Experience</h3>
           <div className="space-y-10">
             {data.experience.map((job, index) => (
-              <div key={index}>
+              <div key={index} className="break-inside-avoid">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-2">
                   <div>
                     <h4 className="text-xl font-bold text-gray-800">{job.role}</h4>
@@ -108,7 +108,7 @@ const ExecutiveSidebar: React.FC<{ data: ResumeData }> = ({ data }) => {
         <section>
           <h3 className="text-2xl font-bold text-[#2C3E50] uppercase mb-4 border-b-2 border-[#2C3E50] pb-2 inline-block">Education</h3>
           {data.education.map((edu, index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="mb-4 break-inside-avoid">
               <h4 className="text-lg font-bold text-gray-800">{edu.institution}</h4>
               <p className="text-gray-500">{edu.period}</p>
             </div>

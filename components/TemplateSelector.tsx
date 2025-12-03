@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TemplateType } from '../types';
-import { Palette, Layers, Monitor, Clock, Grid, Download, Loader2 } from 'lucide-react';
+import { Palette, Layers, Monitor, Clock, Grid, Download, Loader2, FileText } from 'lucide-react';
 
 interface TemplateSelectorProps {
   currentTemplate: TemplateType;
@@ -9,6 +9,7 @@ interface TemplateSelectorProps {
 
 const TemplateSelector: React.FC<TemplateSelectorProps> = ({ currentTemplate, onSelect }) => {
   const [isExporting, setIsExporting] = useState(false);
+  const [isWordExporting, setIsWordExporting] = useState(false);
 
   const templates = [
     { type: TemplateType.ExecutiveSidebar, icon: <Layers size={18} />, label: "Executive" },
@@ -35,17 +36,17 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ currentTemplate, on
           jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
         };
 
-        document.body.classList.add('pdf-export');
+        document.documentElement.classList.add('pdf-export');
 
         // @ts-ignore
         window.html2pdf().set(opt).from(element).save()
           .then(() => {
-            document.body.classList.remove('pdf-export');
+            document.documentElement.classList.remove('pdf-export');
             setIsExporting(false);
           })
           .catch((err: any) => {
             console.error("PDF Export failed:", err);
-            document.body.classList.remove('pdf-export');
+            document.documentElement.classList.remove('pdf-export');
             setIsExporting(false);
             window.print(); // Fallback
           });
@@ -53,6 +54,46 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ currentTemplate, on
         // Fallback to native print if library fails
         window.print();
         setIsExporting(false);
+      }
+    }, 100);
+  };
+
+  const handleWordExport = () => {
+    setIsWordExporting(true);
+    setTimeout(() => {
+      const element = document.getElementById('root');
+      // @ts-ignore
+      if (typeof window !== 'undefined' && window.htmlDocx && element) {
+        // Clone the element to avoid modifying the visible DOM
+        const clone = element.cloneNode(true) as HTMLElement;
+
+        // Remove the template selector from the clone
+        const selector = clone.querySelector('[data-html2canvas-ignore]');
+        if (selector) {
+          selector.remove();
+        }
+
+        const html = `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <title>Resume</title>
+            </head>
+            <body>
+              ${clone.outerHTML}
+            </body>
+          </html>
+        `;
+
+        // @ts-ignore
+        const converted = window.htmlDocx.asBlob(html);
+        // @ts-ignore
+        window.saveAs(converted, 'Tuan_Dang_Portfolio.docx');
+        setIsWordExporting(false);
+      } else {
+        console.error("Word export library not found");
+        setIsWordExporting(false);
       }
     }, 100);
   };
@@ -68,8 +109,8 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ currentTemplate, on
           type="button"
           onClick={() => onSelect(t.type)}
           className={`flex items-center gap-2 px-3 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${currentTemplate === t.type
-              ? 'bg-blue-600 text-white shadow-md transform scale-105'
-              : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+            ? 'bg-blue-600 text-white shadow-md transform scale-105'
+            : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
             }`}
         >
           {t.icon}
@@ -88,6 +129,17 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ currentTemplate, on
       >
         {isExporting ? <Loader2 size={18} className="animate-spin" /> : <Download size={18} />}
         <span className="hidden sm:inline">{isExporting ? 'Exporting...' : 'Export PDF'}</span>
+      </button>
+
+      <button
+        type="button"
+        onClick={handleWordExport}
+        disabled={isWordExporting}
+        className="flex items-center gap-2 px-3 py-2 rounded-full text-xs sm:text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        title="Export Word"
+      >
+        {isWordExporting ? <Loader2 size={18} className="animate-spin" /> : <FileText size={18} />}
+        <span className="hidden sm:inline">{isWordExporting ? 'Exporting...' : 'Export Word'}</span>
       </button>
     </div>
   );
