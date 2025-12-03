@@ -24,22 +24,28 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ currentTemplate, on
     // Small timeout to allow UI to update
     setTimeout(() => {
       const element = document.getElementById('root');
-      
+
       // @ts-ignore
       if (typeof window !== 'undefined' && window.html2pdf && element) {
         const opt = {
-          margin:       [0.2, 0],
-          filename:     'Tuan_Dang_Portfolio.pdf',
-          image:        { type: 'jpeg', quality: 0.98 },
-          html2canvas:  { scale: 2, useCORS: true, scrollY: 0 },
-          jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+          margin: [0.2, 0],
+          filename: 'Tuan_Dang_Portfolio.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+          jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
         };
+
+        document.body.classList.add('pdf-export');
 
         // @ts-ignore
         window.html2pdf().set(opt).from(element).save()
-          .then(() => setIsExporting(false))
+          .then(() => {
+            document.body.classList.remove('pdf-export');
+            setIsExporting(false);
+          })
           .catch((err: any) => {
             console.error("PDF Export failed:", err);
+            document.body.classList.remove('pdf-export');
             setIsExporting(false);
             window.print(); // Fallback
           });
@@ -52,7 +58,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ currentTemplate, on
   };
 
   return (
-    <div 
+    <div
       data-html2canvas-ignore
       className="print:hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-white/90 backdrop-blur-md shadow-2xl rounded-full p-2 border border-slate-200 flex gap-1 sm:gap-2 items-center"
     >
@@ -61,17 +67,16 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ currentTemplate, on
           key={t.type}
           type="button"
           onClick={() => onSelect(t.type)}
-          className={`flex items-center gap-2 px-3 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${
-            currentTemplate === t.type
+          className={`flex items-center gap-2 px-3 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${currentTemplate === t.type
               ? 'bg-blue-600 text-white shadow-md transform scale-105'
               : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
-          }`}
+            }`}
         >
           {t.icon}
           <span className="hidden sm:inline">{t.label}</span>
         </button>
       ))}
-      
+
       <div className="w-px h-6 bg-slate-300 mx-1"></div>
 
       <button

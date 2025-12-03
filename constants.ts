@@ -2,8 +2,8 @@ import { ResumeData } from './types';
 
 export const RESUME_DATA: ResumeData = {
   name: "Tuan Dang",
-  title: "Scrum Master",
-  summary: "I’m a technical-minded Scrum Master with strong experience guiding development teams through complex product delivery and scaled Agile environments. I combine calm leadership with data-driven decision-making, using flow metrics, Power BI dashboards, and automation to improve transparency, predictability, and team performance. I supported Aperia’s Merchant initiative from its greenfield stage, scaling it to six Scrum teams within a SAFe environment.",
+  title: "Technical Scrum Master",
+  summary: "I’m a technical-minded Scrum Master with strong experience guiding development teams through complex product delivery and scaled Agile environments. I combine calm leadership with data-driven decision-making, using flow metrics, Power BI dashboards, and automation to improve transparency, predictability, and team performance. I supported Aperia’s Merchant initiative from its greenfield stage, scaling it to six Scrum teams within a SAFe environment. Experienced .NET Technical Leader with over 5 years of expertise in designing and building scalable enterprise applications. Strong ability to lead technical teams, improve code quality through rigorous review processes, and drive technical decision-making. Passionate about solving complex architectural challenges and mentoring developers to reach their full potential.",
   contact: {
     phone: "0932700399",
     email: "hoangtuand@gmail.com",
@@ -23,9 +23,8 @@ export const RESUME_DATA: ResumeData = {
   ],
   languages: ["English", "Vietnamese"],
   certifications: [
-    "Project Execution: Running the Project",
-    "Project Planning: Putting It All Together",
-    "Project Initiation: Starting a Successful Project"
+    "Google Project Management Professional",
+    "Professional Scrum Master™ II (PSM II)"
   ],
   education: [
     {
@@ -36,7 +35,7 @@ export const RESUME_DATA: ResumeData = {
   experience: [
     {
       company: "Aperia Solutions",
-      role: "Scrum Master",
+      role: "Technical Scrum Master",
       duration: "December 2020 - Present (5 years)",
       location: "Ho Chi Minh City, Vietnam",
       achievements: [
@@ -44,7 +43,7 @@ export const RESUME_DATA: ResumeData = {
         "Scaled Agile (SAFe) Scaling: Instrumental in the 'Merchant' initiative, establishing the initial Agile structure and successfully scaling to six Scrum teams.",
         "Risk Management Strategy: Proactively identified delivery risks, developed mitigation plans, and managed complex cross-team dependencies to ensure smoother releases.",
         "Technical Debt Resolution: Leveraged technical background to negotiate with Product Owners, balancing new feature delivery with necessary code refactoring.",
-        "Flow Optimization: Stabilized delivery flow for 'VisionWeb' by identifying process blockers and implementing continuous improvement strategies."
+        "Flow Optimization: Stabilized delivery flow for 'VisionWeb' by identifying process blockers and implementing continuous improvement strategies.",
       ]
     },
     {
@@ -56,7 +55,7 @@ export const RESUME_DATA: ResumeData = {
         "Technical Leadership: Led a cross-functional team in end-to-end delivery of .NET MVC web applications.",
         "Code Quality Assurance: Established strict code review processes and coding standards, reducing technical debt and defects.",
         "Mentorship: Mentored junior and mid-level developers on architectural best practices.",
-        "Release Management: Managed deployment schedules and coordinated with QA in a high-compliance environment."
+        "Release Management: Managed deployment schedules and coordinated with QA in a high-compliance environment.",
       ]
     },
     {
