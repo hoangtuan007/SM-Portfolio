@@ -12,7 +12,6 @@ export const RESUME_DATA: ResumeData = {
     linkedinUrl: "https://www.linkedin.com/in/tuan-dang-2726027b"
   },
   topSkills: [
-    "Coaching",
     "Technical Project Leadership",
     "Java / .NET",
     "Agile Leadership",
