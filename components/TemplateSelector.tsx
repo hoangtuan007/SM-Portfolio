@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TemplateType } from '../types';
-import { Palette, Layers, Monitor, Clock, Grid, Download, Loader2, FileText } from 'lucide-react';
+import { Palette, Layers, Monitor, Clock, Grid, Download, Loader2, FileText, Zap } from 'lucide-react';
 
 interface TemplateSelectorProps {
   currentTemplate: TemplateType;
@@ -17,6 +17,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ currentTemplate, on
     { type: TemplateType.TechDark, icon: <Monitor size={18} />, label: "Tech Dark" },
     { type: TemplateType.TimelineCreative, icon: <Clock size={18} />, label: "Timeline" },
     { type: TemplateType.GridAnalyst, icon: <Grid size={18} />, label: "Analyst" },
+    { type: TemplateType.AgileFlow, icon: <Zap size={18} />, label: "Agile Flow" }, // Added AgileFlow template
   ];
 
   const handleExport = () => {

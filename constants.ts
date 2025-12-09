@@ -40,9 +40,10 @@ export const RESUME_DATA: ResumeData = {
       achievements: [
         "Data-Driven Leadership: Architected custom Power BI dashboards using DAX measures sourced from Azure DevOps to visualize team velocity, cycle time, bottlenecks, capacity, and workload utilization. Directly improved stakeholder transparency.",
         "Scaled Agile (SAFe) Scaling: Instrumental in the 'Merchant' initiative, establishing the initial Agile structure and successfully scaling to six Scrum teams.",
+        "Technical Leadership & Estimation: Led T-Shirt sizing and high-level estimation for Epic-level work across multiple Scrum teams. Collaborated closely with Product Owners and Solution Architects to refine requirements, validate feasibility, and finalize technical approaches before commitment.",
+        "Architecture & Planning: Supported teams in breaking down Epics into delivery-ready Stories, ensuring architectural alignment, dependency awareness, and realistic capacity-based forecasting. Improved predictability of cross-team delivery by enforcing structured refinement workflows.",
         "Risk Management Strategy: Proactively identified delivery risks, developed mitigation plans, and managed complex cross-team dependencies to ensure smoother releases.",
-        "Technical Debt Resolution: Leveraged technical background to negotiate with Product Owners, balancing new feature delivery with necessary code refactoring.",
-        "Flow Optimization: Stabilized delivery flow for 'VisionWeb' by identifying process blockers and implementing continuous improvement strategies.",
+        "Technical Debt Resolution: Leveraged technical background to negotiate with Product Owners, balancing new feature delivery with necessary code refactoring."
       ]
     },
     {

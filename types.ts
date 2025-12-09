@@ -38,5 +38,6 @@ export enum TemplateType {
   ModernClean = 'Modern Clean',
   TechDark = 'Tech Dark',
   TimelineCreative = 'Timeline Creative',
-  GridAnalyst = 'Grid Analyst'
+  GridAnalyst = 'Grid Analyst',
+  AgileFlow = 'Agile Flow'
 }
