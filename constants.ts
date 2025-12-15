@@ -3,7 +3,27 @@ import { ResumeData } from './types';
 export const RESUME_DATA: ResumeData = {
   name: "Tuan Dang",
   title: "Technical Scrum Master",
-  summary: "I’m a technical-minded Scrum Master with strong experience guiding development teams through complex product delivery and scaled Agile environments. I combine calm leadership with data-driven decision-making, using flow metrics, Power BI dashboards, and automation to improve transparency, predictability, and team performance.\n\nI supported Aperia’s Merchant initiative from its greenfield stage, scaling it to six Scrum teams within a SAFe environment.\n\nExperienced .NET Technical Leader with over 5 years of expertise in designing and building scalable enterprise applications. Strong ability to lead technical teams, improve code quality through rigorous review processes, and drive technical decision-making.\n\nPassionate about solving complex architectural challenges and mentoring developers to reach their full potential.",
+  summary: `I am a <b>technical-minded Scrum Master and Agile Delivery professional</b> with strong experience leading development teams through <b>complex product delivery and scaled Agile environments</b>.
+<br/><br/>
+I bridge <b>project management discipline, Agile Scrum, and technical execution</b> — combining calm, servant leadership with <b>data-driven decision-making</b>. I use <b>flow metrics, Power BI dashboards, and delivery automation</b> to improve transparency, predictability, and team performance across portfolios.
+<br/><br/>
+I supported <b>Aperia’s Merchant initiative</b>, a large-scale outsourcing program for a US banking client transitioning away from Salesforce, starting from a <b>greenfield setup</b>. I helped establish the initial Agile operating model and later contributed to scaling delivery to <b>six Scrum teams within a SAFe environment</b>, aligning teams, stakeholders, and release execution.
+<br/><br/>
+In my current work with <b>VisionWeb</b>, I focus on:
+<ul class="list-disc ml-5 mt-2 mb-2">
+  <li>Stabilizing delivery flow and reducing delivery risk</li>
+  <li>Improving cross-team alignment and dependency management</li>
+  <li>Building <b>end-to-end delivery reporting</b> using Azure DevOps Analytics, Jira, DAX, and Power BI</li>
+</ul>
+I am particularly strong at <b>turning delivery data into actionable insights</b> for leadership — enabling better forecasting, clearer trade-offs, and continuous improvement grounded in evidence, not opinion.
+<br/><br/>
+<b>Core strengths:</b>
+<br/>
+Agile & Scrum Leadership • SAFe • Project & Delivery Management • Technical Coordination • Flow Metrics • Power BI & Analytics • Continuous Improvement
+<br/><br/>
+<b>Open to:</b>
+<br/>
+Senior Scrum Master • Technical Scrum Master • Agile Delivery • Project Manager • Technical Delivery Coordinator`,
   contact: {
     phone: "0932700399",
     email: "hoangtuand@gmail.com",

@@ -75,9 +75,10 @@ const ExecutiveSidebar: React.FC<{ data: ResumeData }> = ({ data }) => {
 
         <section className="mb-12">
           <h3 className="text-2xl font-bold text-[#2C3E50] uppercase mb-4 border-b-2 border-[#2C3E50] pb-2 inline-block">Summary</h3>
-          <p className="text-gray-600 leading-relaxed text-justify">
-            {data.summary}
-          </p>
+          <p
+            className="text-gray-600 leading-relaxed text-justify"
+            dangerouslySetInnerHTML={{ __html: data.summary }}
+          />
         </section>
 
         <section className="mb-12">

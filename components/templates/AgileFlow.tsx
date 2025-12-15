@@ -56,9 +56,7 @@ const AgileFlow: React.FC<{ data: ResumeData }> = ({ data }) => {
                         <h2 className="text-lg font-bold text-[#0f4c5c] mb-4 flex items-center gap-2">
                             <Target size={20} /> Sprint Goal (Summary)
                         </h2>
-                        <p className="text-slate-600 leading-relaxed text-sm whitespace-pre-line">
-                            {data.summary}
-                        </p>
+                        <p dangerouslySetInnerHTML={{ __html: data.summary }} className="text-gray-600 leading-relaxed" />
                     </div>
 
                     {/* Skills */}

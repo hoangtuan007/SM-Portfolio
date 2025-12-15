@@ -25,9 +25,10 @@ const ModernClean: React.FC<{ data: ResumeData }> = ({ data }) => {
           {/* Summary */}
           <section>
             <h2 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">About Me</h2>
-            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
-              {data.summary}
-            </p>
+            <p
+              className="text-lg text-gray-700 leading-relaxed max-w-3xl"
+              dangerouslySetInnerHTML={{ __html: data.summary }}
+            />
           </section>
 
           {/* Skills Grid */}

@@ -27,7 +27,7 @@ const TimelineCreative: React.FC<{ data: ResumeData }> = ({ data }) => {
             <User size={24} />
             <h2 className="text-xl font-bold">Profile</h2>
           </div>
-          <p className="text-slate-600 leading-relaxed text-lg">{data.summary}</p>
+          <p dangerouslySetInnerHTML={{ __html: data.summary }} className="text-gray-700 leading-relaxed" />
         </div>
 
         {/* Timeline */}

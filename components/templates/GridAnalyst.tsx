@@ -37,9 +37,7 @@ const GridAnalyst: React.FC<{ data: ResumeData }> = ({ data }) => {
           <h2 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
             <Activity size={20} className="text-cyan-500" /> Executive Summary
           </h2>
-          <p className="text-slate-600 leading-relaxed text-lg">
-            {data.summary}
-          </p>
+          <p dangerouslySetInnerHTML={{ __html: data.summary }} className="text-gray-700 leading-relaxed" />
         </div>
 
         {/* Metrics/Skills Area */}

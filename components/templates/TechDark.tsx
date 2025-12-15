@@ -41,8 +41,8 @@ const TechDark: React.FC<{ data: ResumeData }> = ({ data }) => {
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
                 <Hash className="text-green-500" /> README.md
               </h2>
-              <div className="bg-[#161b22] p-6 rounded-md border border-gray-800 text-gray-400 leading-relaxed">
-                {data.summary}
+              <div className="bg-[#161b22] p-6 rounded-md border border-gray-800">
+                <p dangerouslySetInnerHTML={{ __html: data.summary }} className="text-gray-300 leading-relaxed mb-6" />
               </div>
             </section>
 
