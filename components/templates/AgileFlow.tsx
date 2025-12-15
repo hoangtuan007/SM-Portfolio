@@ -1,4 +1,5 @@
 import React from 'react';
+import { Avatar } from '../Avatar';
 import { ResumeData } from '../../types';
 import {
     Kanban,
@@ -21,12 +22,23 @@ const AgileFlow: React.FC<{ data: ResumeData }> = ({ data }) => {
             <header className="bg-[#0f4c5c] text-white py-12 px-4 shadow-lg">
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="text-center md:text-left">
-                        <div className="flex items-center justify-center md:justify-start gap-3 mb-2 text-teal-300">
-                            <Kanban size={24} />
-                            <span className="font-mono text-sm tracking-widest uppercase">Scrum Master Portfolio</span>
+                        <div className="flex flex-col md:flex-row items-center gap-6 mb-2">
+                            {data.avatarUrl && (
+                                <Avatar
+                                    url={data.avatarUrl}
+                                    alt={data.name}
+                                    className="w-32 h-32 rounded-lg shadow-md border-2 border-teal-300"
+                                />
+                            )}
+                            <div>
+                                <div className="flex items-center justify-center md:justify-start gap-3 mb-2 text-teal-300">
+                                    <Kanban size={24} />
+                                    <span className="font-mono text-sm tracking-widest uppercase">Scrum Master Portfolio</span>
+                                </div>
+                                <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">{data.name}</h1>
+                                <p className="text-xl text-teal-100 font-medium">{data.title}</p>
+                            </div>
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2">{data.name}</h1>
-                        <p className="text-xl text-teal-100 font-medium">{data.title}</p>
                     </div>
 
                     <div className="flex flex-col gap-2 text-sm text-teal-100">

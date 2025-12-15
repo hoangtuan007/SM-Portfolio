@@ -1,6 +1,7 @@
 import React from 'react';
 import { ResumeData } from '../../types';
 import { Phone, Mail, MapPin, Linkedin, Award, Globe } from 'lucide-react';
+import { Avatar } from '../Avatar';
 
 const ExecutiveSidebar: React.FC<{ data: ResumeData }> = ({ data }) => {
   return (
@@ -68,9 +69,20 @@ const ExecutiveSidebar: React.FC<{ data: ResumeData }> = ({ data }) => {
 
       {/* Main Content */}
       <main className="w-full md:w-2/3 p-8 md:p-16 bg-white">
-        <header className="mb-12">
-          <h1 className="text-5xl font-bold text-[#2C3E50] mb-2">{data.name}</h1>
-          <h2 className="text-xl text-gray-500 font-medium">{data.title}</h2>
+        <header className="mb-12 flex flex-col md:flex-row items-center md:items-start gap-8 border-b-2 border-[#2C3E50] pb-8">
+          {data.avatarUrl && (
+            <div className="shrink-0">
+              <Avatar
+                url={data.avatarUrl}
+                alt={data.name}
+                className="w-40 h-40 rounded-full shadow-lg border-4 border-white"
+              />
+            </div>
+          )}
+          <div className="text-center md:text-left">
+            <h1 className="text-5xl font-bold text-[#2C3E50] mb-2">{data.name}</h1>
+            <h2 className="text-xl text-gray-500 font-medium">{data.title}</h2>
+          </div>
         </header>
 
         <section className="mb-12">

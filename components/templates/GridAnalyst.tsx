@@ -1,4 +1,5 @@
 import React from 'react';
+import { Avatar } from '../Avatar';
 import { ResumeData } from '../../types';
 import { PieChart, TrendingUp, Activity, Box, CheckCircle } from 'lucide-react';
 
@@ -10,9 +11,17 @@ const GridAnalyst: React.FC<{ data: ResumeData }> = ({ data }) => {
 
         {/* Profile Card */}
         <div className="md:col-span-1 bg-white rounded-2xl shadow-sm p-6 flex flex-col items-center text-center">
-          <div className="w-32 h-32 bg-cyan-100 rounded-full flex items-center justify-center mb-4 text-4xl text-cyan-600 font-bold">
-            {data.name.slice(0, 2).toUpperCase()}
-          </div>
+          {data.avatarUrl ? (
+            <Avatar
+              url={data.avatarUrl}
+              alt={data.name}
+              className="w-32 h-32 rounded-full mb-4 border-4 border-cyan-50"
+            />
+          ) : (
+            <div className="w-32 h-32 bg-cyan-100 rounded-full flex items-center justify-center mb-4 text-4xl text-cyan-600 font-bold">
+              {data.name.slice(0, 2).toUpperCase()}
+            </div>
+          )}
           <h1 className="text-2xl font-bold text-slate-800">{data.name}</h1>
           <p className="text-cyan-600 font-medium mb-6">{data.title}</p>
 
@@ -109,7 +118,7 @@ const GridAnalyst: React.FC<{ data: ResumeData }> = ({ data }) => {
                 </span>
               ))}
               {data.certifications.map((cert, i) => (
-                <span key={`c-${i}`} className="text-xs font-semibold px-2 py-1 bg-yellow-50 text-yellow-700 rounded border border-yellow-100">
+                <span key={`c - ${i} `} className="text-xs font-semibold px-2 py-1 bg-yellow-50 text-yellow-700 rounded border border-yellow-100">
                   Cert: {cert.split(':')[0]}
                 </span>
               ))}

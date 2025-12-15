@@ -3,27 +3,25 @@ import { ResumeData } from './types';
 export const RESUME_DATA: ResumeData = {
   name: "Tuan Dang",
   title: "Technical Scrum Master",
-  summary: `I am a <b>technical-minded Scrum Master and Agile Delivery professional</b> with strong experience leading development teams through <b>complex product delivery and scaled Agile environments</b>.
+  avatarUrl: "/avatar.jpg",
+  summary: `I'm a <b>technical-minded Project Manager and Agile Delivery Lead</b> with a strong track record of driving predictable delivery in complex, multi-team environments.
 <br/><br/>
-I bridge <b>project management discipline, Agile Scrum, and technical execution</b> — combining calm, servant leadership with <b>data-driven decision-making</b>. I use <b>flow metrics, Power BI dashboards, and delivery automation</b> to improve transparency, predictability, and team performance across portfolios.
+I specialize in <b>end-to-end delivery execution</b> — from planning and dependency management to risk mitigation and stakeholder alignment — while leveraging <b>Agile and hybrid delivery models</b> to adapt to real-world constraints.
 <br/><br/>
-I supported <b>Aperia’s Merchant initiative</b>, a large-scale outsourcing program for a US banking client transitioning away from Salesforce, starting from a <b>greenfield setup</b>. I helped establish the initial Agile operating model and later contributed to scaling delivery to <b>six Scrum teams within a SAFe environment</b>, aligning teams, stakeholders, and release execution.
+My strength lies in bridging <b>technology, delivery, and business outcomes</b>. I work closely with engineers, architects, and product leaders to translate strategy into executable plans, stabilize delivery flow, and improve predictability. Rather than relying on intuition alone, I use <b>flow metrics and delivery analytics</b> to support decision-making and transparency.
 <br/><br/>
-In my current work with <b>VisionWeb</b>, I focus on:
-<ul class="list-disc ml-5 mt-2 mb-2">
-  <li>Stabilizing delivery flow and reducing delivery risk</li>
-  <li>Improving cross-team alignment and dependency management</li>
-  <li>Building <b>end-to-end delivery reporting</b> using Azure DevOps Analytics, Jira, DAX, and Power BI</li>
-</ul>
-I am particularly strong at <b>turning delivery data into actionable insights</b> for leadership — enabling better forecasting, clearer trade-offs, and continuous improvement grounded in evidence, not opinion.
+I have hands-on experience building <b>Power BI dashboards and Azure DevOps Analytics</b> solutions to track throughput, cycle time, capacity, and commitments — enabling leadership teams to see risks early and make informed trade-offs.
 <br/><br/>
 <b>Core strengths:</b>
+<ul class="list-disc ml-5 mt-2 mb-2">
+  <li>Technical Project & Delivery Management</li>
+  <li>Agile / SAFe execution in scaled environments</li>
+  <li>Cross-team coordination & dependency management</li>
+  <li>Flow metrics, forecasting & delivery analytics</li>
+  <li>Stakeholder communication & execution governance</li>
+</ul>
 <br/>
-Agile & Scrum Leadership • SAFe • Project & Delivery Management • Technical Coordination • Flow Metrics • Power BI & Analytics • Continuous Improvement
-<br/><br/>
-<b>Open to:</b>
-<br/>
-Senior Scrum Master • Technical Scrum Master • Agile Delivery • Project Manager • Technical Delivery Coordinator`,
+<b>Open to roles:</b> Technical Project Manager • Agile Delivery Lead • Senior Scrum Master • Technical Delivery Coordinator`,
   contact: {
     phone: "0932700399",
     email: "hoangtuand@gmail.com",
@@ -32,13 +30,15 @@ Senior Scrum Master • Technical Scrum Master • Agile Delivery • Project Ma
     linkedinUrl: "https://www.linkedin.com/in/tuan-dang-2726027b"
   },
   topSkills: [
-    "Technical Project Leadership",
-    "Java / .NET",
-    "Agile Leadership",
-    "SAFe",
-    "Flow Metrics",
-    "Power BI Development",
-    "Azure DevOps Analytics"
+    "Agile & Technical Project Leadership",
+    "Delivery Management & Execution",
+    "Scrum, Kanban & SAFe",
+    "Cross-team Technical Coordination",
+    "Flow Metrics & Predictability",
+    "Stakeholder Communication",
+    "Power BI & Delivery Analytics",
+    "Azure DevOps Analytics",
+    "Technical Fluency (Java / .NET / JavaScript / SQL / Python)"
   ],
   languages: ["English", "Vietnamese"],
   certifications: [

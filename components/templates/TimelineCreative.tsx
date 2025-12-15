@@ -1,16 +1,27 @@
 import React from 'react';
+import { Avatar } from '../Avatar';
 import { ResumeData } from '../../types';
-import { Briefcase, GraduationCap, Award, User } from 'lucide-react';
+import { Clock, Calendar, Flag, Target, Zap, Link as IconLink, Mail, Phone, MapPin, Linkedin, Award, Briefcase, GraduationCap, User } from 'lucide-react';
 
 const TimelineCreative: React.FC<{ data: ResumeData }> = ({ data }) => {
   return (
-    <div className="min-h-screen bg-[#f8f9fa] font-sans text-slate-800 pb-20">
+    <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
 
       {/* Hero Banner */}
       <div className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="w-24 h-24 mx-auto bg-white/20 backdrop-blur rounded-full flex items-center justify-center mb-6 text-4xl">
-            {data.name.charAt(0)}
+          <div className="w-32 h-32 mx-auto mb-6 relative">
+            {data.avatarUrl ? (
+              <Avatar
+                url={data.avatarUrl}
+                alt={data.name}
+                className="w-full h-full rounded-full border-4 border-white/30"
+              />
+            ) : (
+              <div className="w-full h-full bg-white/20 backdrop-blur rounded-full flex items-center justify-center text-4xl">
+                {data.name.charAt(0)}
+              </div>
+            )}
           </div>
           <h1 className="text-5xl font-bold mb-4">{data.name}</h1>
           <p className="text-xl text-indigo-100">{data.title}</p>

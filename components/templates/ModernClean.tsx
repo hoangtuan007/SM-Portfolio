@@ -1,4 +1,5 @@
 import React from 'react';
+import { Avatar } from '../Avatar';
 import { ResumeData } from '../../types';
 import { Mail, Phone, Linkedin, MapPin } from 'lucide-react';
 
@@ -9,13 +10,22 @@ const ModernClean: React.FC<{ data: ResumeData }> = ({ data }) => {
 
         {/* Header */}
         <header className="px-8 py-10 bg-white border-b border-gray-100 text-center">
+          {data.avatarUrl && (
+            <div className="flex justify-center mb-6">
+              <Avatar
+                url={data.avatarUrl}
+                alt={data.name}
+                className="w-32 h-32 rounded-full shadow-lg border-4 border-white ring-1 ring-gray-100"
+              />
+            </div>
+          )}
           <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl mb-2">{data.name}</h1>
           <p className="text-xl text-blue-600 font-medium mb-6">{data.title}</p>
 
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
             <span className="flex items-center gap-1"><MapPin size={14} /> {data.contact.location}</span>
             <span className="flex items-center gap-1"><Phone size={14} /> {data.contact.phone}</span>
-            <a href={`mailto:${data.contact.email}`} className="flex items-center gap-1 hover:text-blue-600"><Mail size={14} /> {data.contact.email}</a>
+            <a href={`mailto:${data.contact.email} `} className="flex items-center gap-1 hover:text-blue-600"><Mail size={14} /> {data.contact.email}</a>
             <a href={data.contact.linkedinUrl} className="flex items-center gap-1 hover:text-blue-600"><Linkedin size={14} /> LinkedIn</a>
           </div>
         </header>

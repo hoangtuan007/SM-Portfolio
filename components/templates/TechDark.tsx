@@ -1,4 +1,5 @@
 import React from 'react';
+import { Avatar } from '../Avatar';
 import { ResumeData } from '../../types';
 import { Terminal, Cpu, Database, ChevronRight, Hash } from 'lucide-react';
 
@@ -25,7 +26,14 @@ const TechDark: React.FC<{ data: ResumeData }> = ({ data }) => {
             </p>
           </div>
 
-          <div className="mt-6 md:mt-0 text-right space-y-1 text-sm text-gray-500">
+          <div className="mt-6 md:mt-0 text-right space-y-1 text-sm text-gray-500 flex flex-col items-end">
+            {data.avatarUrl && (
+              <Avatar
+                url={data.avatarUrl}
+                alt={data.name}
+                className="w-24 h-24 rounded-md border-2 border-green-500/50 mb-4 grayscale hover:grayscale-0 transition-all duration-300"
+              />
+            )}
             <p>{data.contact.email}</p>
             <p>{data.contact.linkedin}</p>
             <p>{data.contact.location}</p>

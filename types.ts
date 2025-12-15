@@ -26,6 +26,7 @@ export interface ResumeData {
   title: string;
   summary: string;
   contact: ContactInfo;
+  avatarUrl?: string;
   topSkills: string[];
   languages: string[];
   certifications: string[];
