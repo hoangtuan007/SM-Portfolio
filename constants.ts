@@ -3,7 +3,7 @@ import { ResumeData } from './types';
 export const RESUME_DATA: ResumeData = {
   name: "Tuan Dang",
   title: "Technical Scrum Master",
-  avatarUrl: "/avatar.jpg",
+  avatarUrl: "/avatar_v2.jpg",
   summary: `I'm a <b>technical-minded Project Manager and Agile Delivery Lead</b> with a strong track record of driving predictable delivery in complex, multi-team environments.
 <br/><br/>
 I specialize in <b>end-to-end delivery execution</b> — from planning and dependency management to risk mitigation and stakeholder alignment — while leveraging <b>Agile and hybrid delivery models</b> to adapt to real-world constraints.
