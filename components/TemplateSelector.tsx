@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import { TemplateType } from '../types';
-import { Palette, Layers, Monitor, Clock, Grid, Download, Loader2, FileText, Zap } from 'lucide-react';
+import { TemplateType, ProfileType } from '../types';
+import { Palette, Layers, Monitor, Clock, Grid, Download, Loader2, FileText, Zap, UserCog, Code } from 'lucide-react';
 
 interface TemplateSelectorProps {
   currentTemplate: TemplateType;
   onSelect: (template: TemplateType) => void;
+  currentProfile: ProfileType;
+  onProfileChange: (profile: ProfileType) => void;
 }
 
-const TemplateSelector: React.FC<TemplateSelectorProps> = ({ currentTemplate, onSelect }) => {
+const TemplateSelector: React.FC<TemplateSelectorProps> = ({ currentTemplate, onSelect, currentProfile, onProfileChange }) => {
   const [isExporting, setIsExporting] = useState(false);
   const [isWordExporting, setIsWordExporting] = useState(false);
 
@@ -17,7 +19,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ currentTemplate, on
     { type: TemplateType.TechDark, icon: <Monitor size={18} />, label: "Tech Dark" },
     { type: TemplateType.TimelineCreative, icon: <Clock size={18} />, label: "Timeline" },
     { type: TemplateType.GridAnalyst, icon: <Grid size={18} />, label: "Analyst" },
-    { type: TemplateType.AgileFlow, icon: <Zap size={18} />, label: "Agile Flow" }, // Added AgileFlow template
+    { type: TemplateType.AgileFlow, icon: <Zap size={18} />, label: "Agile Flow" },
   ];
 
   const handleExport = () => {
@@ -104,6 +106,34 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ currentTemplate, on
       data-html2canvas-ignore
       className="print:hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-white/90 backdrop-blur-md shadow-2xl rounded-full p-2 border border-slate-200 flex gap-1 sm:gap-2 items-center"
     >
+      {/* Profile Switcher */}
+      <div className="flex bg-slate-100 rounded-full p-1 mr-2">
+        <button
+          onClick={() => onProfileChange('SM')}
+          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${currentProfile === 'SM'
+              ? 'bg-[#2C3E50] text-white shadow-md'
+              : 'text-slate-500 hover:text-slate-800'
+            }`}
+          title="Scrum Master Profile"
+        >
+          <UserCog size={14} />
+          <span className="hidden sm:inline">SM</span>
+        </button>
+        <button
+          onClick={() => onProfileChange('DOTNET')}
+          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${currentProfile === 'DOTNET'
+              ? 'bg-[#512BD4] text-white shadow-md' // Brand color for .NET
+              : 'text-slate-500 hover:text-slate-800'
+            }`}
+          title=".NET Developer Profile"
+        >
+          <Code size={14} />
+          <span className="hidden sm:inline">.NET</span>
+        </button>
+      </div>
+
+      <div className="w-px h-6 bg-slate-300 mx-1"></div>
+
       {templates.map((t) => (
         <button
           key={t.type}

@@ -42,3 +42,5 @@ export enum TemplateType {
   GridAnalyst = 'Grid Analyst',
   AgileFlow = 'Agile Flow'
 }
+
+export type ProfileType = 'SM' | 'DOTNET';

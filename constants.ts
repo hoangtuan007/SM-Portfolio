@@ -2,26 +2,30 @@ import { ResumeData } from './types';
 
 export const RESUME_DATA: ResumeData = {
   name: "Tuan Dang",
-  title: "Technical Scrum Master",
-  avatarUrl: "/avatar_v2.jpg",
-  summary: `I'm a <b>technical-minded Project Manager and Agile Delivery Lead</b> with a strong track record of driving predictable delivery in complex, multi-team environments.
+  title: "Delivery Lead | Technical Project Manager",
+  avatarUrl: "/avatar_v3.jpg",
+
+  summary: `I'm a <b>Delivery Lead and technical-minded Project Manager</b> with a strong track record of owning and delivering complex technology initiatives in multi-team and scaled environments.
 <br/><br/>
-I specialize in <b>end-to-end delivery execution</b> — from planning and dependency management to risk mitigation and stakeholder alignment — while leveraging <b>Agile and hybrid delivery models</b> to adapt to real-world constraints.
+I specialize in <b>end-to-end delivery ownership</b> — managing scope, schedule, risk, quality, and stakeholder expectations — ensuring delivery is achieved <b>on time, on budget, and aligned with agreed outcomes</b>.
 <br/><br/>
-My strength lies in bridging <b>technology, delivery, and business outcomes</b>. I work closely with engineers, architects, and product leaders to translate strategy into executable plans, stabilize delivery flow, and improve predictability. Rather than relying on intuition alone, I use <b>flow metrics and delivery analytics</b> to support decision-making and transparency.
+With a solid foundation in <b>Agile, Scrum, Kanban, and hybrid delivery models</b>, I apply a pragmatic approach to delivery, adapting ways of working to suit client needs, including traditional models when required.
 <br/><br/>
-I have hands-on experience building <b>Power BI dashboards and Azure DevOps Analytics</b> solutions to track throughput, cycle time, capacity, and commitments — enabling leadership teams to see risks early and make informed trade-offs.
+My background as a software engineer and technical leader enables me to bridge <b>technology, delivery, and commercial considerations</b>. I work closely with engineers, architects, product owners, and client stakeholders to translate strategy into executable delivery plans and measurable results.
+<br/><br/>
+I am highly <b>client-facing and consultative</b>, experienced in delivery reporting, dependency and risk management, and facilitating informed trade-offs. I leverage <b>flow metrics, forecasting, and delivery analytics</b> to support decision-making, transparency, and predictability.
 <br/><br/>
 <b>Core strengths:</b>
 <ul class="list-disc ml-5 mt-2 mb-2">
-  <li>Technical Project & Delivery Management</li>
-  <li>Agile / SAFe execution in scaled environments</li>
+  <li>End-to-end delivery management (scope, schedule, risk, quality)</li>
+  <li>Agile, Scrum, Kanban & hybrid delivery execution</li>
+  <li>Client & stakeholder management</li>
   <li>Cross-team coordination & dependency management</li>
-  <li>Flow metrics, forecasting & delivery analytics</li>
-  <li>Stakeholder communication & execution governance</li>
+  <li>Delivery governance, forecasting & reporting</li>
 </ul>
 <br/>
-<b>Open to roles:</b> Technical Project Manager • Agile Delivery Lead • Senior Scrum Master • Technical Delivery Coordinator`,
+<b>Open to roles:</b> Delivery Lead • Technical Project Manager • Agile Delivery Lead`,
+
   contact: {
     phone: "0932700399",
     email: "hoangtuand@gmail.com",
@@ -29,41 +33,47 @@ I have hands-on experience building <b>Power BI dashboards and Azure DevOps Anal
     linkedin: "linkedin.com/in/tuan-dang-2726027b",
     linkedinUrl: "https://www.linkedin.com/in/tuan-dang-2726027b"
   },
+
   topSkills: [
-    "Agile & Technical Project Leadership",
-    "Delivery Management & Execution",
-    "Scrum, Kanban & SAFe",
-    "Cross-team Technical Coordination",
-    "Flow Metrics & Predictability",
-    "Stakeholder Communication",
+    "End-to-End Delivery Management",
+    "Agile, Scrum, Kanban & Hybrid Delivery",
+    "Client & Stakeholder Management",
+    "Delivery Governance & Reporting",
+    "Risk, Dependency & Issue Management",
+    "Project Planning & Forecasting",
+    "Team Leadership & Delivery Enablement",
     "Power BI & Delivery Analytics",
     "Azure DevOps Analytics",
-    "Technical Fluency (Java / .NET / JavaScript / SQL / Python)"
+    "Technical Leadership (Java / .NET / SQL)"
   ],
+
   languages: ["English", "Vietnamese"],
+
   certifications: [
     "Google Project Management Professional",
     "Professional Scrum Master™ II (PSM II)"
   ],
+
   education: [
     {
       institution: "FPT Aptech",
       period: "2010 - 2012"
     }
   ],
+
   experience: [
     {
       company: "Aperia Solutions",
-      role: "Technical Scrum Master",
+      role: "Delivery Lead / Technical Scrum Master",
       duration: "December 2020 - Present (5 years)",
       location: "Ho Chi Minh City, Vietnam",
       achievements: [
-        "Data-Driven Leadership: Architected custom Power BI dashboards using DAX measures sourced from Azure DevOps to visualize team velocity, cycle time, bottlenecks, capacity, and workload utilization. Directly improved stakeholder transparency.",
-        "Scaled Agile (SAFe) Scaling: Instrumental in the 'Merchant' initiative, establishing the initial Agile structure and successfully scaling to six Scrum teams.",
-        "Technical Leadership & Estimation: Led T-Shirt sizing and high-level estimation for Epic-level work across multiple Scrum teams. Collaborated closely with Product Owners and Solution Architects to refine requirements, validate feasibility, and finalize technical approaches before commitment.",
-        "Architecture & Planning: Supported teams in breaking down Epics into delivery-ready Stories, ensuring architectural alignment, dependency awareness, and realistic capacity-based forecasting. Improved predictability of cross-team delivery by enforcing structured refinement workflows.",
-        "Risk Management Strategy: Proactively identified delivery risks, developed mitigation plans, and managed complex cross-team dependencies to ensure smoother releases.",
-        "Technical Debt Resolution: Leveraged technical background to negotiate with Product Owners, balancing new feature delivery with necessary code refactoring."
+        "End-to-End Delivery Ownership: Led delivery across multiple Scrum teams, managing scope, dependencies, risks, and delivery milestones to ensure predictable outcomes for stakeholders.",
+        "Delivery Governance & Reporting: Built Power BI dashboards using Azure DevOps data to track throughput, cycle time, capacity, and delivery risks — enabling leadership to make early, informed decisions.",
+        "Scaled Agile Delivery: Played a key role in the 'Merchant' initiative, establishing initial delivery structures and scaling execution to six Scrum teams within a SAFe environment.",
+        "Planning & Forecasting: Led Epic-level estimation, release planning, and capacity-based forecasting in collaboration with Product Owners and Solution Architects.",
+        "Risk & Dependency Management: Proactively identified delivery risks, managed cross-team dependencies, and facilitated timely escalation and resolution.",
+        "Technical & Commercial Trade-offs: Leveraged technical background to support prioritization decisions, balancing delivery commitments with technical debt and long-term sustainability."
       ]
     },
     {
@@ -72,10 +82,10 @@ I have hands-on experience building <b>Power BI dashboards and Azure DevOps Anal
       duration: "September 2015 - December 2020 (5 years 4 months)",
       location: "Ho Chi Minh City",
       achievements: [
-        "Technical Leadership: Led a cross-functional team in end-to-end delivery of .NET MVC web applications.",
-        "Code Quality Assurance: Established strict code review processes and coding standards, reducing technical debt and defects.",
-        "Mentorship: Mentored junior and mid-level developers on architectural best practices.",
-        "Release Management: Managed deployment schedules and coordinated with QA in a high-compliance environment.",
+        "Led end-to-end delivery of .NET applications, coordinating development, QA, and release activities.",
+        "Established delivery standards, code review practices, and quality controls to reduce defects and technical debt.",
+        "Mentored engineers and supported team growth and performance.",
+        "Managed release schedules and delivery coordination in a high-compliance environment."
       ]
     },
     {
@@ -84,21 +94,21 @@ I have hands-on experience building <b>Power BI dashboards and Azure DevOps Anal
       duration: "May 2014 - September 2015 (1 year 5 months)",
       location: "Vietnam",
       achievements: [
-        "Enterprise Development: Contributed to large-scale Java applications for Australian clients, adhering to strict security standards.",
-        "System Integration: Collaborated with global teams to integrate new features into legacy systems.",
-        "Issue Resolution: Analyzed and resolved critical defects in production environments."
+        "Contributed to enterprise Java solutions for Australian clients.",
+        "Collaborated with offshore and onshore teams on system integration initiatives.",
+        "Resolved critical production issues in complex environments."
       ]
     },
     {
       company: "TPF Australia",
       role: ".NET Team Leader",
       duration: "March 2013 - May 2014 (1 year 3 months)",
-      location: "",
       achievements: [
-        "Client Management: Served as technical point of contact for Australian stakeholders.",
-        "Team Coordination: Managed daily task assignments and sprint backlogs.",
-        "Process Improvement: Optimized communication workflows between offshore (Vietnam) and onshore (Australia) teams."
-      ]
+        "Acted as technical delivery point of contact for Australian stakeholders.",
+        "Coordinated daily delivery activities and sprint execution.",
+        "Improved communication and delivery flow between offshore and onshore teams."
+      ],
+      location: ''
     },
     {
       company: "VNYI",
@@ -106,19 +116,19 @@ I have hands-on experience building <b>Power BI dashboards and Azure DevOps Anal
       duration: "August 2012 - March 2013 (8 months)",
       location: "",
       achievements: [
-        "Supervised technical implementation of internal .NET MVC projects.",
-        "Conducted performance reviews and provided technical guidance."
+        "Supervised technical delivery of internal .NET projects.",
+        "Provided technical guidance and performance feedback to team members."
       ]
     },
     {
       company: "EverS Software Outsourcing",
       role: ".NET Developer",
       duration: "April 2010 - August 2012 (2 years 5 months)",
-      location: "",
       achievements: [
-        "Developed backend functionality and database structures using ASP.NET MVC and SQL Server.",
-        "Gained foundational experience in the full Software Development Life Cycle (SDLC)."
-      ]
+        "Developed backend systems using ASP.NET MVC and SQL Server.",
+        "Built solid foundations across the full SDLC."
+      ],
+      location: ''
     }
   ]
 };
